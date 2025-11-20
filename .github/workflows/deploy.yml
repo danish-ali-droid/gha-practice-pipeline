@@ -3,6 +3,14 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+    group: 'github-pages'
+    cancel-in-progress: true
 jobs:
     build:
      runs-on: ubuntu-latest
@@ -13,8 +21,10 @@ jobs:
          uses: actions/setup-node@v3
          with:
            node-version: '20'
+           cache: 'npm'
        - name: install deps
          run: npm ci
+         
        - name: build
          run: npm run build
        - name: upload build output
