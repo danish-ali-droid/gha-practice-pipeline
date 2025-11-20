@@ -20,7 +20,7 @@ jobs:
        - name: setup node.js
          uses: actions/setup-node@v3
          with:
-           node-version: '18'
+           node-version: '20'
            cache: 'npm'
        - name: install deps
          run: npm ci
@@ -29,7 +29,7 @@ jobs:
          run: npm run build
        - name: upload build output
          uses: actions/upload-artifact@v4
-         
+
          with:
            path: dist
     deploy:
