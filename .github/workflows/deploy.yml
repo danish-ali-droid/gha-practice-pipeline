@@ -1,4 +1,4 @@
-name: deloye to GitHub Pages
+name: deloye
 on:
   push:
     branches:
