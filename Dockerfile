@@ -5,4 +5,4 @@ WORKDIR  /app
 RUN npm install
 COPY . .
 RUN  npm ci --omit=dev
-CMD [ "node","src /index.html" ]
+CMD [ "node","src/index.html" ]
