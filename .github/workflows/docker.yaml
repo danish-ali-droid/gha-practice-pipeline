@@ -22,4 +22,4 @@ jobs:
          with:
             context: .
             push: true
-            tags: ${{secrets.DOCKER_USERNAME}}/gha-practice-pipeline:latest
+            tags: ${{secrets.DOCKER_USERNAME}}/gha-practice-pipeline:v1
